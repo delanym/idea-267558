@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:jaxb="https://jakarta.ee/xml/ns/jaxb"
+            elementFormDefault="qualified"
+            jaxb:version="3.0">
+
+  <xsd:complexType name="ApplicationParameter">
+    <xsd:sequence>
+      <xsd:element name="applicationParameter" type="AccountName"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:simpleType name="AccountName">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="100"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>
